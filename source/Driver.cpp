@@ -1,12 +1,12 @@
-/*
-    Name: Driver.cpp
-    Compile: g++ Driver.cpp -o runPA1
-    Authors: Bekhruz Anvarov, Ben Nunley, Lance Johnston
-    Date: 11/7/20
-    Credit Statement: 
-    Example code such as how to use <ctime> library, etc. was provided by April Crockett during CSC-1300 and CSC-1310 courses.
-    Pseudo code reference for bubbleSort & mergeSort provided by Prantar Ghosh in lecture notes.
-*/
+/************************************************************************************************************************************
+    Name: Driver.cpp                                                                                                                |
+    Compile: g++ Driver.cpp -o runPA1                                                                                               |
+    Authors: Bekhruz Anvarov, Ben Nunley, Lance Johnston                                                                            |
+    Date: 11/7/20                                                                                                                   |
+    Credit Statement:                                                                                                               |
+    Example code such as how to use <ctime> library, etc. was provided by April Crockett during CSC-1300 and CSC-1310 courses.      |
+    Pseudo code reference for bubbleSort & mergeSort provided by Prantar Ghosh in lecture notes.                                    |
+\***********************************************************************************************************************************/
 
 // Library includes
 #include <iomanip>
@@ -16,13 +16,41 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include <cmath>
 using namespace std;
 
-// Function Prototypes
+
+//----------Structs-----------//
+
+// City Struct
+struct City {
+    int cityID;
+    double xCoord;
+    double yCoord;
+};
+
+struct ClosestResult {
+    double dist;
+    int cityID1;
+    int cityID2;
+};
+
+
+//----------Function Declarations-----------//
+
 void bubbleSort(double FlightTimeHour[], double FlightCost[], int size);
 void mergeSort(double arr[], int left, int right);
 void merge(double arr[], int left, int mid, int right);
 
+
+double euclideanDist(const City &a, const City &b);
+ClosestResult BFClosest(City cities[], int n);
+ClosestResult BFRange(const vector<City> &pts, int left, int right);
+ClosestResult closestUtil(vector<City> &ptsX, int left, int right);
+ClosestResult divdedAndConquer(City cities[], int n);
+
+
+//-----------Main Function-----------//
 int main() {
     
     // Program Start Message
@@ -40,7 +68,9 @@ int main() {
     }
     cout << "Successfully opened flights.txt" << endl;
     */
-   
+
+  
+
     clock_t tStartBub, tStopBub;
     clock_t tStartMer, tStopMer;
     double compute_time_Bub = 0, compute_time_Mer = 0;
@@ -51,6 +81,7 @@ int main() {
     vector<double> FlightCost;
     vector<int> CityNum; */
 
+    
     double FlightTimeHour[100];
     double FlightCost[100];
     int CityNum[100];
@@ -61,7 +92,9 @@ int main() {
     ofstream outputFile3("output/FtimeMerSort.txt", ios::trunc);
     ofstream outputFile4("output/FcostMerSort.txt", ios::trunc);
     ofstream runTimeFile("output/runtimes.txt", ios::trunc);
+    runTimeFile.close();
     
+    //ofstream runTimeFile("output/runtimes.txt", ios::trunc);
     // initlize n and delim for parsing
     int n;
     char delim;
@@ -173,6 +206,45 @@ int main() {
     
     outputFile3.close();
     outputFile4.close();
+
+
+    // Checkpoint 2: Closest Pair of Cities
+
+    cout << "Starting Closest Pair of Cities..." << endl;
+
+    // Read city data from file
+    fstream cityFile("given/cities.txt");
+    City cities[100];
+    int totalCities = 0;
+
+    while (cityFile >> 
+            cities[totalCities].cityID >> 
+            cities[totalCities].xCoord >> 
+            cities[totalCities].yCoord){
+            totalCities++;
+            
+            if (totalCities >= 100) {
+                break; // Prevent overflow if more than 100 cities
+            }
+        }
+        cityFile.close();
+
+        // TODO: Implement Closest Pair Algorithms and output results
+        ofstream bfFile("output/closest_BF.txt", ios::trunc);
+        ofstream dcFile("output/closest_DC.txt", ios::trunc);
+        ofstream runTimeFile2("output/runtimes2.txt", ios::trunc);
+
+        // TODO: Brute Force Closest Pair
+
+        // TODO: Divide and Conquer Closest Pair
+
+        // TODO: Write runtimes to runtimes2.txt
+
+        // TODO: Close all opened files
+        
+
+
+
     return 0;
 }
 
