@@ -9,3 +9,7 @@
 
 # Ignore outputs
 /output/*.txt
+
+
+# VS Code settings
+.vscode/
