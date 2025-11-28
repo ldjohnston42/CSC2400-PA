@@ -1,6 +1,6 @@
 /************************************************************************************************************************************
     Name: Driver.cpp                                                                                                                |
-    Compile: g++ source/Driver.cpp source/Functions.cpp -o runPA1                                                                   |
+    Compile: g++ source/Driver.cpp source/Functions.cpp                                                                             |
     Authors: Bek Anvarov, Ben Nunley, Lance Johnston                                                                                |
     Date: 11/7/20                                                                                                                   |
     Purpose:                                                                                                                        |
