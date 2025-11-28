@@ -1,6 +1,6 @@
 /************************************************************************************************************************************
     Name: Functions.cpp                                                                                                             |
-    Authors: Bekhruz Anvarov, Ben Nunley, Lance Johnston                                                                            |
+    Authors: Bek Anvarov, Ben Nunley, Lance Johnston                                                                            |
     Date: 11/26/2025                                                                                                                |
     Purpose:                                                                                                                        |
       Implements the core algorithms used in PA1:                                                                                   |
