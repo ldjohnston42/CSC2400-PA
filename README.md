@@ -28,9 +28,9 @@ This program implements two main parts for PA1:
    - For increasing values of *n* (from 50 up to the total number of cities), it:
      - Finds the closest pair using each algorithm.
      - Writes results to:
-       - `output/BFClosest.txt` (brute force)
-       - `output/DCClosest.txt` (divide & conquer)
-       - `output/runtime2.txt` (BF vs DC runtime per line)
+       - `output/BF-Closest.txt` (brute force)
+       - `output/DC-Closest.txt` (divide & conquer)
+       - `output/runtimes.txt` (BF vs DC runtime per line)
 
 ---
 
