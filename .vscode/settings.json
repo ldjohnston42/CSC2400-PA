@@ -3,6 +3,7 @@
         "cmath": "cpp",
         "iostream": "cpp",
         "fstream": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "algorithm": "cpp"
     }
 }
