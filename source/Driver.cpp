@@ -36,7 +36,7 @@ int main() {
     //runBubbleAndMerge(); // (Checkpoint 1)
 
 
-    runClosestPair();   // (Checkpoint 2)
+    //runClosestPair();   // (Checkpoint 2)
     
     return 0;
 }
