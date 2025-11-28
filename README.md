@@ -6,7 +6,7 @@
 
 This program implements two main parts for PA1:
 
-To Compile run: **g++ source/Driver.cpp source/Function.cpp**
+**To Compile run:** g++ source/Driver.cpp source/Function.cpp
 1. **Checkpoint 1 – Flight Sorting**
    - Reads flight data from `given/flights.txt`.
    - Uses **Bubble Sort** and **Merge Sort** to sort:
